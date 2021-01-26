@@ -16,11 +16,16 @@ class ReserveringController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+
     public function index()
     {
 
         $reservering = Reservering::with('user')->get();
-        return view('reservering.index', compact('reservering'));
+
+        $auto = Auto::take(1)->get();
+
+        return view('reservering.index', compact('reservering'), ['allAuto' => $auto]);
+
     }
 
     /**
@@ -39,13 +44,13 @@ class ReserveringController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request, User $id)
+    public function store(Request $request, User $id, Auto $auto)
     {
          $this->attributes['user_id'] = Auth::user()->id;
             $request->validate([
             'begintijd' => 'required',
-            'eindtijd' => 'required'
-        ]);
+            'eindtijd' => 'required']);
+
 
 
 

@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\PrintController;
+use App\Http\Controllers\ReserveringController;
 
 /*
 |--------------------------------------------------------------------------
@@ -34,6 +35,11 @@ Auth::routes();
 Route::resource('reservering',\App\Http\Controllers\ReserveringController::class);
 Route::resource('autos', \App\Http\Controllers\AutoController::class );
 Route::resource('assortiment', \App\Http\Controllers\AssortimentController::class);
+Route::resource('reservering',\App\Http\Controllers\ReserveringController::class);
+
+
+Route::get('/add-to-cart/{reservering}', [App\Http\Controllers\CartController::class, 'add'])->name('cart.add')->middleware('auth');
+Route::get('/cart', [App\Http\Controllers\CartController::class, 'index'])->name('cart.index')->middleware('auth');
 
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

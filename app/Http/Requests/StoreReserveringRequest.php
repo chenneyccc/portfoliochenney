@@ -26,7 +26,7 @@ class StoreReserveringRequest extends FormRequest
         return [
             'begintijd' => 'required',
             'eindtijd' => 'required',
-       //     'auto_id' => 'required',
+       //hp     'auto_id' => 'required',
       //      'user_id' => 'required'
         ];
     }

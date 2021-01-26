@@ -57,6 +57,10 @@
 
                     <!-- Right Side Of Navbar -->
                     <ul class="navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ route('cart.index') }}">Mijn Reservering</a>
+                        </li>
+
                         <!-- Authentication Links -->
                         @guest
                             @if (Route::has('login'))
@@ -107,7 +111,7 @@
                 </div>
             </div>
         </nav>
-        <main class="py-4">
+        <main class="py-4 container">
             @yield('content')
         </main>
     </div>
