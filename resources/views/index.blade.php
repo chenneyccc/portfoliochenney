@@ -2,88 +2,153 @@
 
 @section('content')
 
-
     <main role="main">
-
-        <section class="jumbotron text-center">
-            <div class="container">
-                <h1 class="jumbotron-heading">Rent-A-Car</h1>
-                <p class="lead text-muted"> De beste auto’s huur je bij Rent A Car.
-                    In Nederland vind je 1 Rent A Car vestiging.
-                    Onze prijzen zijn voordelig en onze service is
-                    erg betrouwbaar en onze auto's
-                    zijn gemiddeld niet ouder dan 6 maanden.
-                    Zo ben je verzekerd van kwaliteit.
-                    Kies de voertuigcategorie die het best bij
-                    jou past.
-                    Ga je voor een busje, een luxe auto, een SUV,
-                    een sportieve auto of een cabrio?
-                    Kijk snel naar de mogelijkheden bij een vestiging bij jou in de buurt.
-                    Ook als je een leenauto nodig hebt, kun je bij ons terecht.
-                    Neem een kijkje op onze website.</p>
-                <p>
-                    <a href="{{route('assortiment.index')}}" class="btn btn-primary my-2">Zie hier ons assortiment</a>
-                    <a href="#" class="btn btn-secondary my-2">Lees hier meer over ons</a>
-                </p>
-            </div>
-        </section>
-
-        <div class="album py-5 bg-light">
             <div class="container">
 
-                <div class="row">
-                    <div class="col-md-4">
-                        <div class="card mb-4 box-shadow">
-                            <img class="card-img-top" src="{{ URL::to('../img/bmw.jpg') }}" alt="Card image cap">
-                            <div class="card-body">
-                                <p class="card-text">De zomer is in aantocht en dan wilt u toch niets liever dan ultieme zomergevoel beleven? Huur dan eens een cabrio bij Rent A Car. Geniet gedurende het voorjaar en zomer van de mooie steden en natuur die Nederland rijk is. Daarnaast kunt u natuurlijk ook op vakantie naar het buitenland met deze cabrio.</p>
-                                <div class="d-flex justify-content-between align-items-center">
-                                    <div class="btn-group">
-                                        <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                                        <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
-                                    </div>
-                                    <small class="text-muted">9 mins</small>
-                                </div>
-                            </div>
-                        </div>
+
+
+                <div class="jumbotron p-3 p-md-5 text-white rounded bg-dark">
+                    <div class="col-md-6 px-0">
+                        <h1 class="display-4 font-italic">Chenney Chang Portfolio</h1>
+                        <p class="lead my-3">Welkom op mijn Portfolio website. Op mijn portfolio website zal ik mijn projecten laten zien
+                                                en meer informatie over mezelf vertellen.</p>
+                        <p class="lead mb-0"><a href="{{ url('/about') }}" class="text-white font-weight-bold">Lees hier meer over mij...</a></p>
+                        <img class="rounded-circle" style="margin-left: 600px; margin-top: -300px; height: 300px; width: 300px  "
+                             src="../img/homefoto.jpg" alt="Generic placeholder image" width="140" height="140">
+               </div>
+                </div>
+
+                 <div class="row mb-2">
+                     <div class="col-md-6">
+                      <div class="card flex-md-row mb-4 box-shadow h-md-250">
+                         <div class="card-body d-flex flex-column align-items-start">
+                           <h3 class="mb-0">
+                            <a class="text-primary" href="#"> Beroepsexamen</a>
+                                </h3>
+                    <div class="mb-1 text-muted">Portfolio</div>
+                                    <p class="card-text mb-auto">Hier krijgt u informatie te zien over mijn beroepsexamen. Over hoe me beroepsexamen
+                                    eruit zag en hoe me eindproduct eruit ziet.</p>
+                                    <a href="#"> Lees Meer...</a>
                     </div>
-                    <div class="col-md-4">
-                        <div class="card mb-4 box-shadow">
-                            <img class="card-img-top"  src="{{ URL::to('../img/audi.jpg') }}" alt="Card image cap">
-                            <div class="card-body">
-                                <p class="card-text">Iedereen droomt er wel eens van om in een exclusieve auto rond te rijden. Bij Rent A Car kun je tegen een aantrekkelijke prijs een luxueuze auto huren. Dit kan voor een langere periode, maar natuurlijk is dit ook mogelijk voor een dag. U kunt bij ons een betrouwbare auto huren.
+                            <img class="card-img-right flex-auto d-none d-md-block" style="height: 250px; width: 200px"
+                                 src="../img/examen.jpg" alt="Card image cap">
+                    </div>
 
+                        </div>
+
+
+                     <div class="col-md-6">
+                         <div class="card flex-md-row mb-4 box-shadow h-md-250">
+                             <div class="card-body d-flex flex-column align-items-start">
+                                 <h3 class="mb-0">
+                                     <a class="text-success" href="{{ url('/keuzedelen') }}">Keuzedelen</a>
+                                 </h3>
+                                 <div class="mb-1 text-muted">Portfolio</div>
+                                 <p class="card-text mb-auto">Hier krijgt u meer informatie te zien over de keuzedelen die ik heb gemaakt. De keuzedelen zijn
+                                     onderdeel van mijn examen.
+                                 </p>
+                                 <a href="{{ url('/keuzedelen') }}">Lees Meer...</a>
+                             </div>
+                             <img class="card-img-right flex-auto d-none d-md-block" style="height: 250px; width: 200px"
+                                  src="../img/keuzedelen.jpg" alt="Card image cap">
+                         </div>
+                     </div>
+                 </div>
+
+
+                {{--Hier begint 2e row--}}
+                <div class="row mb-2">
+                <div class="col-md-6">
+                    <div class="card flex-md-row mb-4 box-shadow h-md-250">
+                        <div class="card-body d-flex flex-column align-items-start">
+                            <h3 class="mb-0">
+                                <a class="text-success" href="{{ url('/html') }}">HTML</a> & <a class="text-danger" href="#">CSS</a>
+                            </h3>
+                            <div class="mb-1 text-muted">Portfolio</div>
+                            <p class="card-text mb-auto">Hier krijgt u meer informatie te zien over mijn projecten waarbij ik HTML & CSS hebt gebruikt.
+                            </p>
+                            <a href="{{ url('/html') }}">Lees Meer...</a>
+                        </div>
+                        <img class="card-img-right flex-auto d-none d-md-block" style="height: 250px; width: 200px"
+                             src="../img/htmlcss.jpg" alt="Card image cap">
+                    </div>
+                </div>
+
+
+                    <div class="col-md-6">
+                        <div class="card flex-md-row mb-4 box-shadow h-md-250">
+                            <div class="card-body d-flex flex-column align-items-start">
+                                <h3 class="mb-0">
+                                    <a class="text-danger" href="{{ url('/java') }}"> Java</a>
+                                </h3>
+                                <div class="mb-1 text-muted">Portfolio</div>
+                                <p class="card-text mb-auto">Hier krijgt u meer informatie te zien over mijn projecten waarbij ik Javascript hebt gebruikt.
                                 </p>
-                                <div class="d-flex justify-content-between align-items-center">
-                                    <div class="btn-group">
-                                        <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                                        <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
-                                    </div>
-                                    <small class="text-muted">9 mins</small>
-                                </div>
+                                <a href="#"> Lees Meer...</a>
                             </div>
+                            <img class="card-img-right flex-auto d-none d-md-block" style="height: 250px; width: 200px"
+                                 src="../img/java-logo.png" alt="Card image cap">
                         </div>
+
                     </div>
-                    <div class="col-md-4">
-                        <div class="card mb-4 box-shadow">
-                            <img class="card-img-top" src="{{ URL::to('../img/mercedes-suv.jpg') }}" alt="Card image cap">
-                            <div class="card-body">
-                                <p class="card-text">Een SUV huren betekent veel comfort, vermogen, zitplaatsen én bagageruimte. Dankzij de flexibiliteit van een SUV is het een ideale huurauto voor zowel korte stedentrips als langere autovakanties: iedereen heeft genoeg ruimte om de hele reis lang te kunnen blijven genieten. </p>
-                                <div class="d-flex justify-content-between align-items-center">
-                                    <div class="btn-group">
-                                        <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                                        <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
-                                    </div>
-                                    <small class="text-muted">9 mins</small>
-                                </div>
+
+                </div>
+                {{--Hier begint de 3e row--}}
+                <div class="row mb-2">
+                <div class="col-md-6">
+                    <div class="card flex-md-row mb-4 box-shadow h-md-250">
+                        <div class="card-body d-flex flex-column align-items-start">
+                            <h3 class="mb-0">
+                                <a class="text-success" href="{{ url('/javascript') }}">Javascript</a>
+                            </h3>
+                            <div class="mb-1 text-muted">Portfolio</div>
+                            <p class="card-text mb-auto">Hier krijgt u meer informatie te zien over mijn projecten waarbij ik Javascript hebt gebruikt.
+                            </p>
+                            <a href="#">Lees Meer...</a>
+                        </div>
+                        <img class="card-img-right flex-auto d-none d-md-block" style="height: 250px; width: 200px"
+                             src="../img/javascript.jpg" alt="Card image cap">
+                    </div>
+                </div>
+
+
+
+                    <div class="col-md-6">
+                        <div class="card flex-md-row mb-4 box-shadow h-md-250">
+                            <div class="card-body d-flex flex-column align-items-start">
+                                <h3 class="mb-0">
+                                    <a class="text-info" href="#"> PHP</a>
+                                </h3>
+                                <div class="mb-1 text-muted">Portfolio</div>
+                                <p class="card-text mb-auto">Hier krijgt u meer informatie te zien over mijn projecten waarbij ik PHP hebt gebruikt.
+                                </p>
+                                <a href="#"> Lees Meer...</a>
                             </div>
+                            <img class="card-img-right flex-auto d-none d-md-block" style="height: 250px; width: 200px"
+                                 src="../img/php.png" alt="Card image cap">
                         </div>
+
                     </div>
+
+                </div>
             </div>
-        </div>
-
-    </main>
 
 
+
+
+
+</main>
+
+<!-- Bootstrap core JavaScript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
+<script src="../../assets/js/vendor/popper.min.js"></script>
+<script src="../../dist/js/bootstrap.min.js"></script>
+<!-- Just to make our placeholder images work. Don't actually copy the next line! -->
+<script src="../../assets/js/vendor/holder.min.js"></script>
 
 @endsection
+
+
